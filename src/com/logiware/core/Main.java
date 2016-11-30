@@ -20,8 +20,23 @@ public class Main {
         office.getWindowList().add(window);
         office.addWindow(window);
         
+        
+        
+        
+         //create new object of Chair
+        Chair chair = new Chair();
+        chair.setColor("Red");
+        chair.setHeight(10);
+        chair.setWidth(20);
+        
+        //add window to window list
+        office.getChairList().add(chair);
+       
+        office.addChair(chair);
+        
         //Print company name
         System.out.println("Windows " + office.getWindowList());
+         System.out.println("Chair " + office.getChairList());
        
     }
     

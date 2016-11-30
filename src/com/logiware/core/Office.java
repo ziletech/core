@@ -12,9 +12,14 @@ public class Office {
     private String name;
     private List<Window> windowList;
 
+   
+    
+    private List<Chair> chairList;
+    
     public Office(String name) {
         this.name = name;
         this.windowList = new ArrayList<>();
+         this.chairList = new ArrayList<>();
     }
 
     public String getName() {
@@ -36,5 +41,15 @@ public class Office {
     public void addWindow(Window window){
         this.windowList.add(window);
     }
+     public List<Chair> getChairList() {
+        return chairList;
+    }
 
+    public void setChairList(List<Chair> chairList) {
+        this.chairList = chairList;
+    }
+     
+     public void addChair(Chair chair){
+        this.chairList.add(chair);
+    }
 }
