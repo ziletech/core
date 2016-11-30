@@ -1,4 +1,4 @@
-package logisoftoffice;
+package com.logiware.core;
 import java.util.*; 
 
 /**
