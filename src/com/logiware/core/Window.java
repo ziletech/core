@@ -1,42 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.logiware.core;
 
 /**
  *
- * @author user
+ * @author Sunil
  */
 public class Window {
     
-    private Integer number;
-    private String size;
-    private String type;
+    private int height;
+    private int width;
+    private String color;
 
-    public String getType() {
-        return type;
+    public int getHeight() {
+        return height;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
-    public Integer getNumber() {
-        return number;
+    public String getColor() {
+        return color;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public String getSize() {
-        return size;
+    public int getWidth() {
+        return width;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setWidth(int width) {
+        this.width = width;
     }
-    
+
 }
