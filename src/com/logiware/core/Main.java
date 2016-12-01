@@ -1,4 +1,5 @@
 package com.logiware.core;
+import java.util.*;
 
 /**
  *
@@ -22,6 +23,37 @@ public class Main {
         
         //Print company name
         System.out.println("Windows " + office.getWindowList());
+        
+        //====== Creating new Fan boject
+        
+        Fan fanOne = new Fan();
+        fanOne.setBrand("Usha");
+        fanOne.setType("Wall Fan");
+        fanOne.setNumber(200);
+        
+       // Creating Second Fan Object
+         Fan fanTwo = new Fan();
+         
+         fanTwo.setBrand("Philips");
+         fanTwo.setType("Table Fan");
+         fanTwo.setNumber(2040);
+         
+        // Adding Fan in Office 
+        
+        office.addFan(fanOne);
+        office.addFan(fanTwo);
+        
+        // Print Fans List 
+        // System.out.println("Fans "+ office.getFanList());
+        
+         for(Fan obj:office.getFanList()) { 
+            System.out.println(obj.getBrand());
+            System.out.println(obj.getType());
+            System.out.println(obj.getNumber());
+         }
+         
+        
+        
        
     }
     
