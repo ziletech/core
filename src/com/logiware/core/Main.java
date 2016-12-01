@@ -48,10 +48,10 @@ public class Main {
         
         office.addFan(fanOne);
         office.addFan(fanTwo);
-        for(Fan obj:office.getFanList()) { 
-            System.out.println(obj.getBrand());
-            System.out.println(obj.getType());
-            System.out.println(obj.getNumber());
+        for(Fan fan:office.getFanList()) { 
+            System.out.println(fan.getBrand());
+            System.out.println(fan.getType());
+            System.out.println(fan.getNumber());
          }
     }
 }
