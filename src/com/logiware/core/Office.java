@@ -12,11 +12,14 @@ public class Office {
     private String name;
     private List<Window> windowList;    
     private List<Chair> chairList;
+    private List<Laptop> laptopList;
+    
 
    public Office(String name) {
         this.name = name;
         this.windowList = new ArrayList<>();
         this.chairList = new ArrayList<>();
+        this.laptopList = new ArrayList<>();
     }
 
     public String getName() {
@@ -46,11 +49,23 @@ public class Office {
      public void addChair(Chair chair){
         this.chairList.add(chair);
     }
-  @Override
-    public String toString() {
-        return "Office{" + "name=" + name + ", windowList=" + windowList + ", chairList=" + chairList + '}';
+
+    public List<Laptop> getLaptopList() {
+        return laptopList;
     }
+
+    public void setLaptopList(List<Laptop> laptopList) {
+        this.laptopList = laptopList;
+    }
+     public void addLaptop(Laptop laptop){        
+        this.laptopList.add(laptop);
+    }  
+
+    @Override
+    public String toString() {
+        return "Office{" + "name=" + name + ", windowList=" + windowList + ", chairList=" + chairList + ", laptopList=" + laptopList + '}';
+    }
+    
+    
        
-     
-     
 }
