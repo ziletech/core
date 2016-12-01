@@ -1,5 +1,4 @@
 package com.logiware.core;
-import java.util.*;
 
 /**
  *
@@ -11,6 +10,15 @@ public class Main {
         Office office = new Office("Logisoftware");
         System.out.println("Office Name : " + office.getName());
         //create new object of Window
+         Main main = new Main();
+         main.windowProperty(office);
+         main.fanProperty(office);
+        
+    } 
+    
+    public void windowProperty(Office office){
+//        Office office = new Office("Logisoftware");
+        
         Window window = new Window();
         window.setColor("Red");
         window.setHeight(10);
@@ -22,39 +30,28 @@ public class Main {
         office.addWindow(window);
         
         //Print company name
-        System.out.println("Windows " + office.getWindowList());
-        
-        //====== Creating new Fan boject
-        
+        System.out.println("Windows " + office.getWindowList());   
+    
+    }
+    
+    public void fanProperty(Office office){
+//        Office office = new Office("Logisoftware");        
         Fan fanOne = new Fan();
         fanOne.setBrand("Usha");
         fanOne.setType("Wall Fan");
-        fanOne.setNumber(200);
+        fanOne.setNumber(200); 
         
-       // Creating Second Fan Object
-         Fan fanTwo = new Fan();
-         
-         fanTwo.setBrand("Philips");
-         fanTwo.setType("Table Fan");
-         fanTwo.setNumber(2040);
-         
-        // Adding Fan in Office 
+        Fan fanTwo = new Fan();
+        fanTwo.setBrand("Philips");
+        fanTwo.setType("Table Fan");
+        fanTwo.setNumber(2040);
         
         office.addFan(fanOne);
         office.addFan(fanTwo);
-        
-        // Print Fans List 
-        // System.out.println("Fans "+ office.getFanList());
-        
-         for(Fan obj:office.getFanList()) { 
+        for(Fan obj:office.getFanList()) { 
             System.out.println(obj.getBrand());
             System.out.println(obj.getType());
             System.out.println(obj.getNumber());
          }
-         
-        
-        
-       
     }
-    
 }
