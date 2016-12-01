@@ -10,30 +10,24 @@ import java.util.List;
 public class Office {
 
     private String name;
-    private List<Window> windowList;
-
-   
-    
+    private List<Window> windowList;    
     private List<Chair> chairList;
-    
-    public Office(String name) {
+
+   public Office(String name) {
         this.name = name;
         this.windowList = new ArrayList<>();
-         this.chairList = new ArrayList<>();
+        this.chairList = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public List<Window> getWindowList() {
         return windowList;
     }
-
     public void setWindowList(List<Window> windowList) {
         this.windowList = windowList;
     }
@@ -52,4 +46,11 @@ public class Office {
      public void addChair(Chair chair){
         this.chairList.add(chair);
     }
+  @Override
+    public String toString() {
+        return "Office{" + "name=" + name + ", windowList=" + windowList + ", chairList=" + chairList + '}';
+    }
+       
+     
+     
 }
