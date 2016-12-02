@@ -9,14 +9,13 @@ import java.util.List;
 public class Building {
 
     private String name;
-    private List<Flat> flatList;
-    private List<Room> roomList;
+    private List<Floor> floorList;
     private List<Item> itemList;
     
     public Building(String name) {
         this.name = name;
-        this.flatList = new ArrayList<>();
-        this.roomList = new ArrayList<>();
+        this.floorList = new ArrayList<>();
+        
         this.itemList= new ArrayList<>();
        
     }   
@@ -28,39 +27,15 @@ public class Building {
         this.name = name;
     }
 
-    public List<Flat> getFlatList() {
-        return flatList;
+    public List<Floor> getFloorList() {
+        return floorList;
     }
 
-    public void setFlatList(List<Flat> flatList) {
-        this.flatList = flatList;
-    }
+    public void setFloorList(List<Floor> floorList) {
+        this.floorList = floorList;
+    } 
    
-     public void addFlat(Flat flat){
-        this.flatList.add(flat);
-    }
-    public List<Room> getRoomList() {
-        return roomList;
-    }
-
-    public void setRoomList(List<Room> roomList) {
-        this.roomList = roomList;
-    }
-     public void addRoom(Room  room){        
-        this.roomList.add(room);
-    }  
-
-    public List<Item> getItemList() {
-        return itemList;
-    }
-
-    public void setItemList(List<Item> itemList) {
-        this.itemList = itemList;
-    }
-      public void addItem(Item item){        
-        this.itemList.add(item);
-    }  
-    
-    
-    
-}
+     public void addFloor(Floor floor){
+        this.floorList.add(floor);
+    }   
+  }
