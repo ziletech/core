@@ -2,9 +2,6 @@ package com.logiware.building;
 
 import java.util.ArrayList;
 import java.util.List;
-
- 
-
 /**
  *
  * @author omi
