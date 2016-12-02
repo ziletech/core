@@ -14,7 +14,7 @@ public class MainBuilding {
        Scanner sc=new Scanner(System.in);  
        Building building=new Building("Casino Royale");
      
-      //create new object of Flat
+      //create new object of Floor
        Floor floor1 =new Floor();
        floor1.setName("GFloor");
        Floor floor2 =new Floor();
@@ -27,7 +27,7 @@ public class MainBuilding {
        building.addFloor(floor2);
        building.addFloor(floor3);
        building.addFloor(floor4);
-       
+      // //create new object of Flat
        Flat flat1=new Flat();
        flat1.setName("1BHK");
        Flat flat2=new Flat();
@@ -47,7 +47,7 @@ public class MainBuilding {
         floor3.addFlat(flat3);
       
         
-       //Room Name and Type  
+       //New object for Room and get Name and Type  
         Room room1=new Room();
         room1.setName("2Room");
         room1.setType("Deluxe");
@@ -62,7 +62,7 @@ public class MainBuilding {
         flat2.addRoom(room2);
         flat3.addRoom(room2);
         
-        //Item Name and Type  
+        //New Object for Item Name and Type  
         Item item1=new Item();
         item1.setName("Fan");
         item1.setType("Electronic");
@@ -96,7 +96,7 @@ public class MainBuilding {
              for(Room roomR:flatF.getRoomList()){
                  System.out.println("Room Name : "+roomR.getName()); 
                  System.out.println("Room Type : "+roomR.getType());
-                for(Item itemI:roomR.getItemList()){  
+                 for(Item itemI:roomR.getItemList()){  
                  System.out.println("Item Name : "+itemI.getName()); 
                  System.out.println("Item Type : "+itemI.getType());
                  System.out.println("**************************");
