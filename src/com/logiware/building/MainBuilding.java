@@ -88,19 +88,18 @@ public class MainBuilding {
         System.out.println("Building Name :- " + building.getName());
         System.out.println("Enter Floor Name : -");  
         String name=sc.next(); 
-         
         for(Floor floorF:building.getFloorList()){
-            if(floorF.getName().equals(name)){
-             for(Flat flatF:floorF.getFlatList()){  
-             System.out.println("Flat Name : "+flatF.getName());
-             for(Room roomR:flatF.getRoomList()){
-                 System.out.println("Room Name : "+roomR.getName()); 
-                 System.out.println("Room Type : "+roomR.getType());
+          if(floorF.getName().equals(name)){
+            for(Flat flatF:floorF.getFlatList()){  
+                  System.out.println("Flat Name : "+flatF.getName());
+                for(Room roomR:flatF.getRoomList()){
+                    System.out.println("Room Name : "+roomR.getName()); 
+                    System.out.println("Room Type : "+roomR.getType());
                  for(Item itemI:roomR.getItemList()){  
-                 System.out.println("Item Name : "+itemI.getName()); 
-                 System.out.println("Item Type : "+itemI.getType());
-                 System.out.println("**************************");
-                 System.out.println("____________________________");
+                      System.out.println("Item Name : "+itemI.getName()); 
+                      System.out.println("Item Type : "+itemI.getType());
+                      System.out.println("**************************");
+                      System.out.println("____________________________");
                 }
               }//Room close
             }//Flat close
