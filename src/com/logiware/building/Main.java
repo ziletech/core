@@ -1,6 +1,7 @@
 package com.logiware.building;
 
 import java.util.Scanner;
+
 /**
  *
  * @author user
@@ -20,27 +21,70 @@ public class Main {
     }
 
     public void print(Building building, Floor floor, Main main, Flat flat) {
+        main.buidingInfo(building);
         while (true) {
+
             Scanner input = new Scanner(System.in);
-            System.out.println("Enter flor 3,4 or 5");
+            System.out.println("Enter Floor Number 3,4, 5 Or Flat Number");
             int number = input.nextInt();
 
             if (number == 3) {
-                main.thirdfloor();                
+                main.thirdfloor();
             }
 
             if (number == 4) {
                 main.fourthFloor();
             }
-            
-            if(number == 5){
-            main.fifthFloor();
+
+            if (number == 5) {
+                main.fifthFloor();
+            }
+            if (number == 301) {
+                main.flat301();
+            }
+
+            if (number == 302) {
+                main.flat302();
+            }
+            if (number == 303) {
+                main.flat303();
+            }
+
+            if (number == 401) {
+                main.flat401();
+            }
+            if (number == 402) {
+                main.flat402();
+            }
+            if (number == 403) {
+                main.flat403();
             }
         }
     }
 
+    public void buidingInfo(Building building) {
+        Floor thirdFloor = new Floor();
+        thirdFloor.setName("3rd Floor");
+
+        Floor fourthFloor = new Floor();
+        fourthFloor.setName("4th Floor");
+
+        Floor fifthFloor = new Floor();
+        fifthFloor.setName("5th Floor !");
+        fifthFloor.setName(" 5th Floor is under construction ");
+
+        building.addFloorList(thirdFloor);
+        building.addFloorList(fourthFloor);
+        building.addFloorList(fifthFloor);
+
+        for (Floor floor : building.getFloorList()) {
+            System.out.println("Floor List : " + floor.getName());            
+        }
+
+    }
+
     public void thirdfloor() {
-        Floor floorOfThird =new Floor();
+        Floor floorOfThird = new Floor();
         Flat flatOne = new Flat();
         flatOne.setFlatNumber(301);
 
@@ -49,20 +93,19 @@ public class Main {
 
         Flat flatThree = new Flat();
         flatThree.setFlatNumber(303);
-        
-        
+
         floorOfThird.addFlatList(flatOne);
         floorOfThird.addFlatList(flatTwo);
         floorOfThird.addFlatList(flatThree);
-        
-           for (Flat flat : floorOfThird.getFlatList()) {
+
+        for (Flat flat : floorOfThird.getFlatList()) {
             System.out.println("Flat List :" + flat.getFlatNumber());
         }
 
     }
 
     public void fourthFloor() {
-        Floor floorOffourth=new Floor();
+        Floor floorOffourth = new Floor();
         Flat flatFour = new Flat();
         flatFour.setFlatNumber(401);
 
@@ -80,8 +123,8 @@ public class Main {
             System.out.println("Flat List :" + flat.getFlatNumber());
         }
     }
-    
-    public void fifthFloor(){
+
+    public void fifthFloor() {
         Floor floorofFifth = new Floor();
         Flat flatEight = new Flat();
         flatEight.setFlatNumber(501);
@@ -95,10 +138,200 @@ public class Main {
         floorofFifth.addFlatList(flatEight);
         floorofFifth.addFlatList(flatNine);
         floorofFifth.addFlatList(flatTen);
-        
-         for (Flat flat : floorofFifth.getFlatList()) {
+
+        for (Flat flat : floorofFifth.getFlatList()) {
             System.out.println("Flat List :" + flat.getFlatNumber());
         }
+    }
+
+    public void flat301() {
+        Flat flat = new Flat();
+
+        Room bedRoom = new Room();
+        bedRoom.setType("Bed Room");
+        bedRoom.setNumber(1);
+
+        Room kitchen = new Room();
+        kitchen.setType("Kitchen");
+        kitchen.setNumber(1);
+
+        Room bathRoom = new Room();
+        bathRoom.setType("Bath Room");
+        bathRoom.setNumber(4);
+
+        Room hallRoom = new Room();
+        hallRoom.setType("Big Hall");
+        hallRoom.setNumber(1);
+
+        flat.addRoomList(bedRoom);
+        flat.addRoomList(kitchen);
+        flat.addRoomList(bathRoom);
+        flat.addRoomList(hallRoom);
+
+        for (Room roomInfo : flat.getRoomList()) {
+            System.out.println("Room Type : " + roomInfo.getType());
+            System.out.println("Room Number : " + roomInfo.getNumber());
+        }
+
+    }
+
+    public void flat302() {
+        Flat flat = new Flat();
+
+        Room bedRoom = new Room();
+        bedRoom.setType("Bed Room");
+        bedRoom.setNumber(1);
+
+        Room kitchen = new Room();
+        kitchen.setType("Kitchen");
+        kitchen.setNumber(1);
+
+        Room bathRoom = new Room();
+        bathRoom.setType("Bath Room");
+        bathRoom.setNumber(3);
+
+        Room hallRoom = new Room();
+        hallRoom.setType("Big Hall");
+        hallRoom.setNumber(1);
+
+        flat.addRoomList(bedRoom);
+        flat.addRoomList(kitchen);
+        flat.addRoomList(bathRoom);
+        flat.addRoomList(hallRoom);
+
+        for (Room roomInfo : flat.getRoomList()) {
+            System.out.println("Room Type : " + roomInfo.getType());
+            System.out.println("Room Number : " + roomInfo.getNumber());
+        }
+    }
+
+    public void flat303() {
+        Flat flat = new Flat();
+
+        Room bedRoom = new Room();
+        bedRoom.setType("Bed Room");
+        bedRoom.setNumber(1);
+
+        Room kitchen = new Room();
+        kitchen.setType("Kitchen");
+        kitchen.setNumber(1);
+
+        Room bathRoom = new Room();
+        bathRoom.setType("Bath Room");
+        bathRoom.setNumber(3);
+
+        Room hallRoom = new Room();
+        hallRoom.setType("Big Hall");
+        hallRoom.setNumber(1);
+
+        Room extraRoom = new Room();
+        extraRoom.setType("Extra Room");
+        extraRoom.setNumber(1);
+
+        flat.addRoomList(bedRoom);
+        flat.addRoomList(kitchen);
+        flat.addRoomList(bathRoom);
+        flat.addRoomList(hallRoom);
+        flat.addRoomList(extraRoom);
+        for (Room roomInfo : flat.getRoomList()) {
+            System.out.println("Room Type : " + roomInfo.getType());
+            System.out.println("Room Number : " + roomInfo.getNumber());
+        }
+
+    }
+
+    public void flat401() {
+        Flat flat = new Flat();
+
+        Room bedRoom = new Room();
+        bedRoom.setType("Bed Room");
+        bedRoom.setNumber(1);
+
+        Room kitchen = new Room();
+        kitchen.setType("Kitchen");
+        kitchen.setNumber(1);
+
+        Room bathRoom = new Room();
+        bathRoom.setType("Bath Room");
+        bathRoom.setNumber(4);
+
+        Room hallRoom = new Room();
+        hallRoom.setType("Big Hall");
+        hallRoom.setNumber(1);
+
+        flat.addRoomList(bedRoom);
+        flat.addRoomList(kitchen);
+        flat.addRoomList(bathRoom);
+        flat.addRoomList(hallRoom);
+
+        for (Room roomInfo : flat.getRoomList()) {
+            System.out.println("Room Type : " + roomInfo.getType());
+            System.out.println("Room Number : " + roomInfo.getNumber());
+        }
+    }
+
+    public void flat402() {
+        Flat flat = new Flat();
+
+        Room bedRoom = new Room();
+        bedRoom.setType("Bed Room");
+        bedRoom.setNumber(1);
+
+        Room kitchen = new Room();
+        kitchen.setType("Kitchen");
+        kitchen.setNumber(1);
+
+        Room bathRoom = new Room();
+        bathRoom.setType("Bath Room");
+        bathRoom.setNumber(3);
+
+        Room hallRoom = new Room();
+        hallRoom.setType("Big Hall");
+        hallRoom.setNumber(1);
+
+        flat.addRoomList(bedRoom);
+        flat.addRoomList(kitchen);
+        flat.addRoomList(bathRoom);
+        flat.addRoomList(hallRoom);
+
+        for (Room roomInfo : flat.getRoomList()) {
+            System.out.println("Room Type : " + roomInfo.getType());
+            System.out.println("Room Number : " + roomInfo.getNumber());
+        }
+    }
+    
+    public void flat403(){
+        Flat flat = new Flat();
+
+        Room bedRoom = new Room();
+        bedRoom.setType("Bed Room");
+        bedRoom.setNumber(1);
+
+        Room kitchen = new Room();
+        kitchen.setType("Kitchen");
+        kitchen.setNumber(1);
+
+        Room bathRoom = new Room();
+        bathRoom.setType("Bath Room");
+        bathRoom.setNumber(3);
+
+        Room hallRoom = new Room();
+        hallRoom.setType("Big Hall");
+        hallRoom.setNumber(1);
+
+        Room extraRoom = new Room();
+        extraRoom.setType("Extra Room");
+        extraRoom.setNumber(1);
+
+        flat.addRoomList(bedRoom);
+        flat.addRoomList(kitchen);
+        flat.addRoomList(bathRoom);
+        flat.addRoomList(hallRoom);
+        flat.addRoomList(extraRoom);
+        for (Room roomInfo : flat.getRoomList()) {
+            System.out.println("Room Type : " + roomInfo.getType());
+            System.out.println("Room Number : " + roomInfo.getNumber());
+        }    
     }
 
 }

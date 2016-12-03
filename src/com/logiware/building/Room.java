@@ -7,7 +7,7 @@ package com.logiware.building;
  */
 public class Room {
     private String type;
-    private String Number;
+    private Integer Number;
 
     public String getType() {
         return type;
@@ -17,11 +17,11 @@ public class Room {
         this.type = type;
     }
 
-    public String getNumber() {
+    public Integer getNumber() {
         return Number;
     }
 
-    public void setNumber(String Number) {
+    public void setNumber(Integer Number) {
         this.Number = Number;
     }
     
