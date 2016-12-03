@@ -58,15 +58,7 @@ public class Main {
         System.out.println("Laptop " + office.getLaptopList());
         System.out.println("ToString Method " + office);
 
-//         
-//           for(Laptop laoptop1:office.getLaptopList()){
-//               System.out.println("Laptop Name"+laoptop1.getName());
-//               System.out.println("Laptop DVD Writer"+laoptop1.getDvdWriter());
-//               System.out.println("Laptop Processor"+laoptop1.getProcessor());
-//               System.out.println("Laptop Ram"+laoptop1.getRam());
-//               System.out.println("Laptop Size"+laoptop1.getSize());
-//               System.out.println("Laptop HardDisk"+laoptop1.getHardDisk());
-//            }
+
     }
 
     public void fanProperty(Office office) {
