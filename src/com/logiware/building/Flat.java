@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Flat {
 
-    private Integer flatNumber;
+    private int flatNumber;
 
     private List<Room> roomList;
 
@@ -18,11 +18,11 @@ public class Flat {
         this.roomList = new ArrayList<>();
     }
 
-    public Integer getFlatNumber() {
+    public int getFlatNumber() {
         return flatNumber;
     }
 
-    public void setFlatNumber(Integer flatNumber) {
+    public void setFlatNumber(int flatNumber) {
         this.flatNumber = flatNumber;
     }
 
@@ -33,9 +33,10 @@ public class Flat {
     public void setRoomList(List<Room> roomList) {
         this.roomList = roomList;
     }
-
+    
     public void addRoomList(Room room) {
         this.roomList.add(room);
     }
+
 
 }

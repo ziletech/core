@@ -2,13 +2,11 @@ package com.logiware.building;
 
 /**
  *
- * @author user
+ * @author omi
  */
-
-public class Room {
-
+public class Item {
     private String type;
-    private Integer Number;
+    private String name;
 
     public String getType() {
         return type;
@@ -18,12 +16,12 @@ public class Room {
         this.type = type;
     }
 
-    public Integer getNumber() {
-        return Number;
+    public String getName() {
+        return name;
     }
 
-    public void setNumber(Integer Number) {
-        this.Number = Number;
+    public void setName(String name) {
+        this.name = name;
     }
     
     

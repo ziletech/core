@@ -3,10 +3,6 @@ package com.logiware.building;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author user
- */
 public class Building {
 
     private String name;
