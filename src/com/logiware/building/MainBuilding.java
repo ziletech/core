@@ -1,7 +1,4 @@
-package com.logiware.building;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.logiware.building
 import java.util.Scanner;
 
 /**

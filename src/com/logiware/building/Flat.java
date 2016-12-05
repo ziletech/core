@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class Flat {
     private String name;
-    private List<Room> roomList;
-
+    private List<Room> roomList;      
+    
     public List<Room> getRoomList() {
         return roomList;
     }
@@ -33,11 +33,5 @@ public class Flat {
       public void addRoom(Room room){
         this.roomList.add(room);
     }   
-      
-   
-
      
-
-   
-    
 }
